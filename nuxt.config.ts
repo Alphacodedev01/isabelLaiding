@@ -13,10 +13,9 @@ export default defineNuxtConfig({
     head: {
       title: 'Hotel Isabel - Tu hogar lejos de casa',
       link: [
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap'
-        }
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'canonical', href: 'https://linktr.ee/apartasuitesisabel' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap' }
       ],
       meta: [
         { charset: 'utf-8' },
@@ -41,10 +40,6 @@ export default defineNuxtConfig({
           name: 'telephone',
           content: '3015409480'
         }
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-        { rel: 'canonical', href: 'https://linktr.ee/apartasuitesisabel' }
       ]
     }
   }

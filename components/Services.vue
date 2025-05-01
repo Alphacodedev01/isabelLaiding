@@ -124,7 +124,7 @@ const services = [
 ]
 
 const currentSlide = ref(0)
-const windowWidth = ref(window.innerWidth)
+const windowWidth = ref(0)
 
 // Responsive breakpoints
 const isMobile = computed(() => windowWidth.value < 640)
@@ -154,6 +154,8 @@ const handleResize = () => {
 }
 
 onMounted(() => {
+  // Inicializamos el ancho de la ventana una vez que estemos en el cliente
+  windowWidth.value = window.innerWidth
   window.addEventListener('resize', handleResize)
 })
 
