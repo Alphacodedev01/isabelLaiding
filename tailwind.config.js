@@ -8,20 +8,25 @@ export default {
     "./app.vue",
     "./error.vue"
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        'display': ['Playfair Display', 'serif'],
+        'sans': ['Lato', 'sans-serif'],
+      },
       colors: {
         primary: {
-          50: '#f8f5f2',
-          100: '#e8e1d9',
-          200: '#d5c7b7',
-          300: '#c2ad95',
-          400: '#ab8f71',
+          50: '#faf4f1',
+          100: '#f5e9e2',
+          200: '#ebd3c6',
+          300: '#e0bda9',
+          400: '#d6a78d',
           500: '#967555', // Color principal
-          600: '#7d5e43',
-          700: '#654a36',
-          800: '#4d372a',
-          900: '#362921',
+          600: '#8b6b4d',
+          700: '#725741',
+          800: '#584334',
+          900: '#3e2f27',
         },
         accent: {
           50: '#f5f7fa',
