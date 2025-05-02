@@ -1,16 +1,31 @@
 <template>
   <div class="min-h-screen bg-white dark:bg-neutral-900 transition-colors duration-300 font-sans">
-    <header class="fixed w-full top-0 z-50 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm shadow-sm">
-      <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 class="text-2xl font-bold text-primary-500 font-display">Isabel Hotel</h1>
-        <div class="space-x-6">
-          <a href="#inicio" class="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Inicio</a>
-          <a href="#habitaciones" class="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Habitaciones</a>
-          <a href="#servicios" class="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Servicios</a>
-          <a href="#ubicacion" class="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Ubicación</a>
-          <a href="#contacto" class="text-gray-600 dark:text-gray-300 hover:text-primary-500 dark:hover:text-primary-400 transition-colors">Contacto</a>
-        </div>
-      </nav>
+    <header class="fixed w-full top-0 z-50">
+      <div class="bg-white/95 dark:bg-neutral-900/95 backdrop-blur-sm shadow-md">
+        <nav class="container mx-auto px-6 h-20 flex justify-between items-center">
+          <div class="flex items-center h-16">
+            <img src="/logo.png" alt="Hotel Isabel" class="h-full w-auto">
+          </div>
+          <div class="flex space-x-8">
+            <a href="#inicio" 
+               class="text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors text-sm uppercase tracking-wider font-medium">
+              Inicio
+            </a>
+            <a href="#habitaciones" 
+               class="text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors text-sm uppercase tracking-wider font-medium">
+              Habitaciones
+            </a>
+            <a href="#servicios" 
+               class="text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors text-sm uppercase tracking-wider font-medium">
+              Servicios
+            </a>
+            <a href="#contacto" 
+               class="text-gray-700 dark:text-gray-200 hover:text-primary-500 dark:hover:text-primary-400 transition-colors text-sm uppercase tracking-wider font-medium">
+              Ubicación y Contacto
+            </a>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <!-- Barra de reservas flotante -->
