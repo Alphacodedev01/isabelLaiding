@@ -129,18 +129,18 @@ export const translations = {
         }
       },
       policy: {
-        title: 'Check-in and Check-out Policies',
+        title: 'Politica de Check-in y Check-out',
         checkin: {
           title: 'Check-in',
-          time: 'From 3:00pm',
-          req: 'Present valid identification'
+          time: 'Desde las 3:00pm',
+          req: 'Presentar documento de identificación'
         },
         checkout: {
           title: 'Check-out',
-          time: 'Until 12:00pm',
-          req: 'Return keys at reception'
+          time: 'Hasta las 12:00pm',
+          req: 'Devolver llaves en la recepción'
         },
-        note: '* Early check-in or late check-out requests are subject to availability and may incur additional charges.'
+        note: '* Las solicitudes de check-in o check-out temprano o tardío están sujetas a disponibilidad y pueden incurrir en cargos adicionales.'
       }
     },
     // Servicios
