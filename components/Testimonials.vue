@@ -1,83 +1,173 @@
 <template>
-  <section class="py-16 bg-white dark:bg-neutral-900">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-12 text-primary-500">Lo que dicen nuestros huéspedes</h2>
-      
-      <div class="relative">
-        <div class="overflow-hidden">
-          <div class="flex transition-transform duration-500 ease-in-out" :style="{ transform: `translateX(-${currentSlide * 100}%)` }">
-            <div v-for="(testimonial, index) in testimonials" :key="index" class="w-full flex-shrink-0 px-4">
-              <div class="max-w-2xl mx-auto bg-neutral-50 dark:bg-neutral-800 rounded-xl p-8 shadow-lg">
-                <div class="flex items-center mb-6">
-                  <img :src="testimonial.image" :alt="testimonial.name" class="w-16 h-16 rounded-full object-cover mr-4">
-                  <div>
-                    <h3 class="text-xl font-semibold text-gray-800 dark:text-white">{{ testimonial.name }}</h3>
-                    <p class="text-gray-600 dark:text-gray-300">{{ testimonial.location }}</p>
+  <section class="relative min-h-screen overflow-hidden">
+    <!-- Imagen de fondo con overlay -->
+    <div class="absolute inset-0">
+      <Transition
+        enter-active-class="transition-all duration-2000 ease-out"
+        enter-from-class="scale-110 opacity-0"
+        enter-to-class="scale-100 opacity-100"
+      >
+        <NuxtImg v-if="isVisible" src="/Imagenes/I7.webp" alt="Fondo testimonios" class="w-full h-full object-cover" format="webp,avif" sizes="sm:600px md:1200px lg:1400px" priority />
+      </Transition>
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+
+    <!-- Contenido -->
+    <div class="relative min-h-screen flex items-center">
+      <div class="container mx-auto px-4 py-16">
+        <Transition
+          enter-active-class="transition-all duration-1200 ease-out"
+          enter-from-class="opacity-0 -translate-y-16"
+          enter-to-class="opacity-1 translate-y-0"
+        >
+          <h2 v-if="isVisible" class="text-4xl md:text-5xl font-display font-bold text-white text-center mb-16">
+            {{ t('home.testimonials.title') }}
+          </h2>
+        </Transition>
+
+        <!-- Carrusel de testimonios -->
+        <div class="max-w-3xl mx-auto">
+          <div v-if="isVisible" class="relative">
+            <!-- Botones de navegación -->
+            <button 
+              @click="prevTestimonial" 
+              class="absolute -left-4 md:-left-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10 transform hover:scale-110 transition-transform duration-300"
+              aria-label="Testimonio anterior"
+            >
+              <i class="fas fa-chevron-left text-2xl md:text-3xl"></i>
+            </button>
+
+            <button 
+              @click="nextTestimonial" 
+              class="absolute -right-4 md:-right-12 top-1/2 -translate-y-1/2 text-white/70 hover:text-white transition-colors z-10 transform hover:scale-110 transition-transform duration-300"
+              aria-label="Siguiente testimonio"
+            >
+              <i class="fas fa-chevron-right text-2xl md:text-3xl"></i>
+            </button>
+
+            <!-- Testimonios -->
+            <div class="relative overflow-hidden h-[300px]">
+              <TransitionGroup 
+                name="carousel"
+                tag="div"
+                class="relative h-full"
+              >
+                <div 
+                  v-for="(testimonial, index) in testimonials" 
+                  :key="index"
+                  v-show="currentIndex === index"
+                  class="absolute inset-0 flex flex-col justify-center items-center px-4"
+                >
+                  <blockquote class="text-xl md:text-2xl text-white font-light italic mb-8 max-w-2xl text-center">
+                    "{{ testimonial.text }}"
+                  </blockquote>
+                  <div class="text-white text-center">
+                    <p class="font-medium text-lg mb-2">{{ testimonial.name }}</p>
+                    <p class="text-white/80 text-sm">{{ testimonial.location }}</p>
+                  </div>
+                  <div class="flex justify-center gap-1 mt-4">
+                    <i 
+                      v-for="star in 5" 
+                      :key="star" 
+                      class="fas fa-star text-terracota-400"
+                    ></i>
                   </div>
                 </div>
-                <p class="text-gray-600 dark:text-gray-300 italic">"{{ testimonial.comment }}"</p>
-                <div class="flex items-center mt-4">
-                  <div class="flex text-yellow-400">
-                    <svg v-for="star in 5" :key="star" class="w-5 h-5" :class="{ 'text-gray-300': star > testimonial.rating }" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  </div>
-                </div>
+              </TransitionGroup>
               </div>
+
+            <!-- Indicadores -->
+            <div class="flex justify-center gap-3 mt-12">
+              <button 
+                v-for="(_, index) in testimonials" 
+                :key="index"
+                @click="setTestimonial(index)"
+                class="w-2 h-2 rounded-full transition-all duration-300 transform hover:scale-150"
+                :class="currentIndex === index ? 'bg-terracota-400 scale-125' : 'bg-white/30 hover:bg-white/50'"
+                :aria-label="'Ver testimonio ' + (index + 1)"
+              ></button>
             </div>
           </div>
         </div>
-        
-        <!-- Controles -->
-        <button @click="prevSlide" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-neutral-800/80 p-2 rounded-full shadow-lg hover:bg-white dark:hover:bg-neutral-700 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button @click="nextSlide" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/80 dark:bg-neutral-800/80 p-2 rounded-full shadow-lg hover:bg-white dark:hover:bg-neutral-700 transition-colors">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
       </div>
     </div>
   </section>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+import { useLanguage } from '~/composables/useLanguage'
 
-const testimonials = [
-  {
-    name: 'Ana García',
-    location: 'Madrid, España',
-    comment: 'Una experiencia increíble. Las habitaciones son espaciosas y el servicio es excepcional. Definitivamente volveré.',
-    rating: 5,
-    image: '/images/624117202.jpg'
-  },
-  {
-    name: 'Carlos Rodríguez',
-    location: 'Buenos Aires, Argentina',
-    comment: 'La ubicación es perfecta y el personal muy atento. La relación calidad-precio es excelente.',
-    rating: 4,
-    image: '/images/624117212.jpg'
-  },
-  {
-    name: 'María López',
-    location: 'Ciudad de México',
-    comment: 'Me encantó la decoración y el ambiente del hotel. El desayuno es delicioso y variado.',
-    rating: 5,
-    image: '/images/624117161.jpg'
+const { t } = useLanguage()
+
+const testimonials = computed<any[]>(() => t('home.testimonials.items') as any[])
+
+const currentIndex = ref(0)
+const isVisible = ref(false)
+const direction = ref('right')
+
+const nextTestimonial = () => {
+  direction.value = 'right'
+  currentIndex.value = (currentIndex.value + 1) % testimonials.value.length
+}
+
+const prevTestimonial = () => {
+  direction.value = 'left'
+  currentIndex.value = (currentIndex.value - 1 + testimonials.value.length) % testimonials.value.length
+}
+
+const setTestimonial = (index: number) => {
+  direction.value = index > currentIndex.value ? 'right' : 'left'
+  currentIndex.value = index
+}
+
+onMounted(() => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        isVisible.value = true
+        observer.disconnect()
+      }
+    })
+  }, {
+    threshold: 0.1
+  })
+
+  const section = document.querySelector('section')
+  if (section) {
+    observer.observe(section)
   }
-]
-
-const currentSlide = ref(0)
-
-const nextSlide = () => {
-  currentSlide.value = (currentSlide.value + 1) % testimonials.length
-}
-
-const prevSlide = () => {
-  currentSlide.value = (currentSlide.value - 1 + testimonials.length) % testimonials.length
-}
+})
 </script> 
+
+<style scoped>
+.carousel-enter-active,
+.carousel-leave-active {
+  transition: all 0.5s ease;
+}
+
+.carousel-enter-from {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.carousel-leave-to {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.carousel-enter-to,
+.carousel-leave-from {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Ajuste para la dirección izquierda */
+.carousel-enter-from[data-direction="left"] {
+  transform: translateX(-100%);
+}
+
+.carousel-leave-to[data-direction="left"] {
+  transform: translateX(100%);
+}
+</style> 

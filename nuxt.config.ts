@@ -7,13 +7,22 @@ export default defineNuxtConfig({
     '~/assets/css/main.css'
   ],
   modules: [
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image'
   ],
+  plugins: [
+    '~/plugins/i18n.ts'
+  ],
+  runtimeConfig: {
+    public: {
+      formspreeEndpoint: process.env.NUXT_PUBLIC_FORMSPREE_ENDPOINT || ''
+    }
+  },
   app: {
     head: {
-      title: 'Hotel Isabel - Tu hogar lejos de casa',
+      title: 'Isabel Apartasuites - Tu hogar lejos de casa',
       link: [
-        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'icon', type: 'image/png', href: '/imagenes/logo2.png' },
         { rel: 'canonical', href: 'https://linktr.ee/apartasuitesisabel' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap' }
       ],

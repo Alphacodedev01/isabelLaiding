@@ -15,18 +15,57 @@ export default {
         'display': ['Playfair Display', 'serif'],
         'sans': ['Lato', 'sans-serif'],
       },
+      animation: {
+        'fade-in-down': 'fadeInDown 1s ease-out',
+        'fade-in-up': 'fadeInUp 1s ease-out 0.5s',
+        'bounce-slow': 'bounce 2s infinite'
+      },
+      keyframes: {
+        fadeInDown: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-20px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          }
+        },
+        fadeInUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(20px)'
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)'
+          }
+        }
+      },
       colors: {
         primary: {
-          50: '#faf4f1',
-          100: '#f5e9e2',
-          200: '#ebd3c6',
-          300: '#e0bda9',
-          400: '#d6a78d',
-          500: '#967555', // Color principal
-          600: '#8b6b4d',
-          700: '#725741',
-          800: '#584334',
-          900: '#3e2f27',
+          50: '#fef4ed',
+          100: '#fde6d4',
+          200: '#fac7a9',
+          300: '#f7a274',
+          400: '#f47442',
+          500: '#E67E51', // Color del volante
+          600: '#d65d2b',
+          700: '#b24522',
+          800: '#8f3820',
+          900: '#752f1f',
+        },
+        terracota: {
+          50: '#fdf3f0',
+          100: '#fbe5df',
+          200: '#f7c6b9',
+          300: '#f2a088',
+          400: '#E67E51', // Color del volante como referencia
+          500: '#e65f35',
+          600: '#d44621',
+          700: '#b0361c',
+          800: '#8d2e1d',
+          900: '#742a1e',
         },
         accent: {
           50: '#f5f7fa',
