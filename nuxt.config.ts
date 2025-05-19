@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     head: {
       title: 'Isabel Apartasuites - Tu hogar lejos de casa',
       link: [
-        { rel: 'icon', type: 'image/png', href: '/imagenes/logo2.png' },
+        { rel: 'icon', type: 'image/webp', href: '/imagenes/logo2.webp' },
         { rel: 'canonical', href: 'https://linktr.ee/apartasuitesisabel' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap' }
       ],
