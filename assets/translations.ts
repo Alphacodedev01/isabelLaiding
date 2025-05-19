@@ -101,7 +101,7 @@ export const translations = {
       amenities: {
         title: 'Comodidades',
         wifi: 'WiFi Gratuito',
-        ac: 'Aire Acondicionado',
+        ac: 'Ventilador',
         tv: 'Smart TV',
         kitchen: 'Cocina Equipada',
         cleaning: 'Servicio de Limpieza',
