@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section id="hero-section" class="relative h-screen">
       <div class="absolute inset-0">
-        <NuxtImg src="/Imagenes/I6.webp" alt="Hotel Isabel" class="w-full h-full object-cover" format="webp,avif" sizes="sm:600px md:1200px lg:1400px" priority />
+        <NuxtImg src="/imagenes/I6.webp" alt="Hotel Isabel" class="w-full h-full object-cover" format="webp,avif" sizes="sm:600px md:1200px lg:1400px" priority />
         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-transparent"></div>
       </div>
       <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-4">
@@ -137,7 +137,7 @@
               <div class="overflow-hidden rounded-lg">
                 <div class="aspect-w-4 aspect-h-3">
                   <NuxtImg 
-                    src="/Imagenes/I1.webp" 
+                    src="/imagenes/I1.webp" 
                     alt="Habitación de lujo"
                     class="w-full h-full object-cover" 
                     format="webp,avif"

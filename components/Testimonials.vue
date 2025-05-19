@@ -7,7 +7,7 @@
         enter-from-class="scale-110 opacity-0"
         enter-to-class="scale-100 opacity-100"
       >
-        <NuxtImg v-if="isVisible" src="/Imagenes/I7.webp" alt="Fondo testimonios" class="w-full h-full object-cover" format="webp,avif" sizes="sm:600px md:1200px lg:1400px" priority />
+        <NuxtImg v-if="isVisible" src="/imagenes/I7.webp" alt="Fondo testimonios" class="w-full h-full object-cover" format="webp,avif" sizes="sm:600px md:1200px lg:1400px" priority />
       </Transition>
       <div class="absolute inset-0 bg-black/60"></div>
     </div>

@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="relative h-[60vh] min-h-[500px]">
       <div class="absolute inset-0">
-        <NuxtImg src="/Imagenes/I2.webp" alt="Habitaciones" class="w-full h-full object-cover" format="webp,avif" sizes="sm:600px md:1200px lg:1400px" priority />
+        <NuxtImg src="/imagenes/I2.webp" alt="Habitaciones" class="w-full h-full object-cover" format="webp,avif" sizes="sm:600px md:1200px lg:1400px" priority />
         <div class="absolute inset-0 bg-black/50"></div>
       </div>
       <div class="relative h-full flex flex-col justify-center items-center px-4">
@@ -84,12 +84,12 @@
             <div class="order-1 lg:order-2">
               <RoomCarousel
                 :images="[
-                  '/Imagenes/Gran Familiar/1.webp',
-                  '/Imagenes/Gran Familiar/2.webp',
-                  '/Imagenes/Gran Familiar/3.webp',
-                  '/Imagenes/Gran Familiar/4.webp',
-                  '/Imagenes/Gran Familiar/5.webp',
-                  '/Imagenes/Gran Familiar/6.webp'
+                  '/imagenes/Gran Familiar/1.webp',
+                  '/imagenes/Gran Familiar/2.webp',
+                  '/imagenes/Gran Familiar/3.webp',
+                  '/imagenes/Gran Familiar/4.webp',
+                  '/imagenes/Gran Familiar/5.webp',
+                  '/imagenes/Gran Familiar/6.webp'
                 ]"
                 room-name="Gran Familiar"
               />
@@ -162,11 +162,11 @@
             <div class="order-1 lg:order-1">
               <RoomCarousel
                 :images="[
-                  '/Imagenes/Familiar Confort/1.webp',
-                  '/Imagenes/Familiar Confort/2.webp',
-                  '/Imagenes/Familiar Confort/3.webp',
-                  '/Imagenes/Familiar Confort/4.webp',
-                  '/Imagenes/Familiar Confort/5.webp'
+                  '/imagenes/Familiar Confort/1.webp',
+                  '/imagenes/Familiar Confort/2.webp',
+                  '/imagenes/Familiar Confort/3.webp',
+                  '/imagenes/Familiar Confort/4.webp',
+                  '/imagenes/Familiar Confort/5.webp'
                 ]"
                 room-name="Familiar Confort"
               />
@@ -239,11 +239,11 @@
             <div class="order-1 lg:order-2">
               <RoomCarousel
                 :images="[
-                  '/Imagenes/Doble Clasico/1.webp',
-                  '/Imagenes/Doble Clasico/2.webp',
-                  '/Imagenes/Doble Clasico/3.webp',
-                  '/Imagenes/Doble Clasico/4.webp',
-                  '/Imagenes/Doble Clasico/5.webp'
+                  '/imagenes/Doble Clasico/1.webp',
+                  '/imagenes/Doble Clasico/2.webp',
+                  '/imagenes/Doble Clasico/3.webp',
+                  '/imagenes/Doble Clasico/4.webp',
+                  '/imagenes/Doble Clasico/5.webp'
                 ]"
                 room-name="Doble Clásico"
               />
@@ -257,7 +257,7 @@
     <section class="relative py-16">
       <!-- Imagen de fondo con overlay -->
       <div class="absolute inset-0">
-        <NuxtImg src="/Imagenes/I8.webp" alt="Fondo políticas" class="w-full h-full object-cover" format="webp,avif" loading="lazy" decoding="async" />
+        <NuxtImg src="/imagenes/I8.webp" alt="Fondo políticas" class="w-full h-full object-cover" format="webp,avif" loading="lazy" decoding="async" />
         <div class="absolute inset-0 bg-black/60"></div>
       </div>
       

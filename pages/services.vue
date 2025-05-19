@@ -3,7 +3,7 @@
     <!-- Hero Section -->
     <section class="relative h-[60vh] min-h-[500px]">
       <div class="absolute inset-0">
-        <NuxtImg src="/Imagenes/Cafeteria/panaderia.webp" 
+        <NuxtImg src="/imagenes/Cafeteria/panaderia.webp" 
                alt="Isabel Café y Pastel" 
                class="w-full h-full object-cover"
                format="webp,avif"
@@ -20,7 +20,7 @@
     <!-- Sección Cafetería -->
     <section class="relative py-16 px-4">
       <div class="absolute inset-0">
-        <NuxtImg src="/Imagenes/Cafeteria/fondo.webp" 
+        <NuxtImg src="/imagenes/Cafeteria/fondo.webp" 
                alt="Fondo Cafetería" 
                class="w-full h-full object-cover"
                format="webp,avif"
@@ -42,7 +42,7 @@
           <!-- Galería de imágenes en grid con hover effects -->
           <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-w-4 aspect-h-3 bg-black/20 backdrop-blur-sm">
-              <NuxtImg src="/Imagenes/Cafeteria/1.webp" 
+              <NuxtImg src="/imagenes/Cafeteria/1.webp" 
                      alt="Café y Pastel" 
                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                      format="webp,avif"
@@ -50,7 +50,7 @@
               <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-w-4 aspect-h-3 bg-black/20 backdrop-blur-sm">
-              <NuxtImg src="/Imagenes/Cafeteria/2.webp" 
+              <NuxtImg src="/imagenes/Cafeteria/2.webp" 
                      alt="Café y Pastel" 
                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                      format="webp,avif"
@@ -58,7 +58,7 @@
               <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-w-4 aspect-h-3 bg-black/20 backdrop-blur-sm">
-              <NuxtImg src="/Imagenes/Cafeteria/3.webp" 
+              <NuxtImg src="/imagenes/Cafeteria/3.webp" 
                      alt="Café y Pastel" 
                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                      format="webp,avif"
@@ -66,7 +66,7 @@
               <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-w-4 aspect-h-3 bg-black/20 backdrop-blur-sm">
-              <NuxtImg src="/Imagenes/Cafeteria/4.webp" 
+              <NuxtImg src="/imagenes/Cafeteria/4.webp" 
                      alt="Café y Pastel" 
                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                      format="webp,avif"
@@ -74,7 +74,7 @@
               <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-w-4 aspect-h-3 bg-black/20 backdrop-blur-sm">
-              <NuxtImg src="/Imagenes/Cafeteria/5.webp" 
+              <NuxtImg src="/imagenes/Cafeteria/5.webp" 
                      alt="Café y Pastel" 
                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                      format="webp,avif"
@@ -82,7 +82,7 @@
               <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
             <div class="group relative overflow-hidden rounded-xl shadow-lg aspect-w-4 aspect-h-3 bg-black/20 backdrop-blur-sm">
-              <NuxtImg src="/Imagenes/Cafeteria/6.webp" 
+              <NuxtImg src="/imagenes/Cafeteria/6.webp" 
                      alt="Café y Pastel" 
                      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                      format="webp,avif"
@@ -142,7 +142,7 @@
           <!-- Lavandería -->
           <div class="bg-white rounded-2xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-all duration-300">
             <div class="relative h-64">
-              <NuxtImg src="/Imagenes/lavanderia.webp" 
+              <NuxtImg src="/imagenes/lavanderia.webp" 
                      alt="Lavandería" 
                      class="w-full h-full object-cover"
                      format="webp,avif"
@@ -176,7 +176,7 @@
           <!-- Parqueadero -->
           <div class="bg-white rounded-2xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-all duration-300">
             <div class="relative h-64">
-              <NuxtImg src="/Imagenes/parqueadero.webp" 
+              <NuxtImg src="/imagenes/parqueadero.webp" 
                      alt="Parqueadero de motos" 
                      class="w-full h-full object-cover"
                      format="webp,avif"
@@ -210,7 +210,7 @@
           <!-- Transporte -->
           <div class="bg-white rounded-2xl overflow-hidden shadow-xl transform hover:scale-[1.02] transition-all duration-300">
             <div class="relative h-64">
-              <NuxtImg src="/Imagenes/transporte.webp" 
+              <NuxtImg src="/imagenes/transporte.webp" 
                      alt="Transporte" 
                      class="w-full h-full object-cover"
                      format="webp,avif"

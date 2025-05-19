@@ -203,9 +203,9 @@ const selectedRoom = ref('family')
 const isVisible = ref(false)
 
 const roomImages = {
-  family: "/Imagenes/Gran Familiar/6.webp",
-  confort: "/Imagenes/Familiar Confort/1.webp",
-  clasico: "/Imagenes/Doble Clasico/4.webp"
+  family: "/imagenes/Gran Familiar/6.webp",
+  confort: "/imagenes/Familiar Confort/1.webp",
+  clasico: "/imagenes/Doble Clasico/4.webp"
 }
 
 const roomTitles = computed(() => ({

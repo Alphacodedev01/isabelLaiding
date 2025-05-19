@@ -3,7 +3,7 @@
     <!-- Imagen de fondo -->
     <div class="fixed inset-0 z-0">
       <div class="absolute inset-0">
-        <NuxtImg src="/Imagenes/I7.webp" 
+        <NuxtImg src="/imagenes/I7.webp" 
                alt="Hotel Isabel" 
                class="w-full h-full object-cover"
                format="webp,avif"
