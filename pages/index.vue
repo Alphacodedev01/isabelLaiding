@@ -132,7 +132,7 @@
                   <i class="fas fa-star text-terracota-400 text-sm md:text-base"></i>
                   <i class="fas fa-star text-terracota-400 text-sm md:text-base"></i>
                 </div>
-                <span class="text-terracota-500 font-semibold text-sm md:text-base">APARTAMENTOS DE LUJO</span>
+                <span class="text-terracota-500 font-semibold text-sm md:text-base">APARTAMENTOS DE LUJO 2</span>
               </div>
               <div class="overflow-hidden rounded-lg">
                 <div class="aspect-w-4 aspect-h-3">
