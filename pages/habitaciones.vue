@@ -52,7 +52,7 @@
                   </li>
                   <li class="flex items-center text-gray-600 dark:text-gray-300">
                     <i class="fas fa-bath text-terracota-400 mr-2"></i>
-                    {{ t('rooms.types.suite.features[2]') }}
+                    {{ t('rooms.types.double.features[2]') }}
                   </li>
                   <li class="flex items-center text-gray-600 dark:text-gray-300">
                     <i class="fas fa-couch text-terracota-400 mr-2"></i>
@@ -191,7 +191,7 @@
                 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <li class="flex items-center text-gray-600 dark:text-gray-300">
                     <i class="fas fa-bed text-terracota-400 mr-2"></i>
-                    {{ t('rooms.types.double.features[0]') }}
+                    {{ t('rooms.types.single.features[0]') }}
                   </li>
                   <li class="flex items-center text-gray-600 dark:text-gray-300">
                     <i class="fas fa-wifi text-terracota-400 mr-2"></i>

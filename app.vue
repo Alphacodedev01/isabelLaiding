@@ -9,7 +9,7 @@
             <NuxtLink to="/">
               <NuxtImg :src="isScrolled ? '/imagenes/logo.webp' : '/imagenes/logo2.webp'" 
                    alt="Hotel Isabel" 
-                   class="h-20 md:h-24 w-auto transition-all duration-500 ease-in-out"
+                   class="h-40 md:h-48 w-auto transition-all duration-500 ease-in-out"
                    format="webp,avif"
                    loading="lazy" />
             </NuxtLink>
@@ -69,7 +69,7 @@
                 <NuxtLink to="/" @click="closeMenu">
                   <NuxtImg src="/imagenes/logo.webp" 
                        alt="Hotel Isabel" 
-                       class="h-20 w-auto"
+                       class="h-40 w-auto"
                        format="webp,avif"
                        loading="lazy" />
                 </NuxtLink>

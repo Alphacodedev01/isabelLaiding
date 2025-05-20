@@ -71,7 +71,7 @@ export const translations = {
           title: 'Habitación Individual',
           description: 'Perfecta para viajeros solitarios o ejecutivos',
           features: [
-            'Cama individual confortable',
+            'Cama doble queen size',
             'Escritorio de trabajo',
             'Baño privado',
             'WiFi de alta velocidad'
@@ -81,7 +81,7 @@ export const translations = {
           title: 'Habitación Doble',
           description: 'Ideal para parejas o viajes compartidos',
           features: [
-            'Cama doble queen size',
+            'Cama doble + cama individual + sofá cama',
             'Área de estar',
             'Baño privado',
             'Smart TV'
@@ -91,7 +91,7 @@ export const translations = {
           title: 'Suite Familiar',
           description: 'Espaciosa y cómoda para toda la familia',
           features: [
-            'Dos habitaciones',
+            'Cama doble + cama individual',
             'Sala de estar',
             'Cocina equipada',
             'Comedor'
@@ -298,7 +298,7 @@ export const translations = {
           title: 'Single Room',
           description: 'Perfect for solo travelers or executives',
           features: [
-            'Comfortable single bed',
+            'Queen size double bed',
             'Work desk',
             'Private bathroom',
             'High-speed WiFi'
@@ -308,7 +308,7 @@ export const translations = {
           title: 'Double Room',
           description: 'Ideal for couples or shared trips',
           features: [
-            'Queen size double bed',
+            'Double bed + single bed + sofa bed',
             'Sitting area',
             'Private bathroom',
             'Smart TV'
@@ -318,7 +318,7 @@ export const translations = {
           title: 'Family Suite',
           description: 'Spacious and comfortable for the whole family',
           features: [
-            'Two bedrooms',
+            'Double bed + single bed',
             'Living room',
             'Equipped kitchen',
             'Dining area'
